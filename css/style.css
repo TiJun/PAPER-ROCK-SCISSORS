@@ -1,8 +1,3 @@
-@media (min-width: 768px) {
-  .start-state__heading {
-    font-size: 3rem;
-  }
-}
 *,
 *::before,
 *::after {
@@ -41,9 +36,23 @@ body {
   border: 1px solid transparent;
   box-shadow: 15px 8px 24px 0px rgb(66, 68, 90);
   border-radius: 5px;
+  background: rgb(142, 153, 139);
+  background: linear-gradient(195deg, rgb(142, 153, 139) 10%, rgb(57, 218, 51) 85%);
   cursor: pointer;
   font-size: 1.5rem;
   margin: 8rem auto 0 auto;
   text-transform: uppercase;
   padding: 0.5rem 0.25rem;
+}
+
+@media (min-width: 768px) {
+  .start-state__heading {
+    font-size: 3rem;
+  }
+  .start-state__images {
+    height: 7rem;
+  }
+  .start-state__btn {
+    font-size: 2.5rem;
+  }
 }/*# sourceMappingURL=style.css.map */

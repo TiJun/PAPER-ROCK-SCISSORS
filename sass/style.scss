@@ -1,6 +1,4 @@
-@use 'large' as *;
-@use 'medium' as *;
-@forward 'small';
+@use '../utilities/index.scss' as *;
 *,
 *::before,
 *::after {
@@ -19,6 +17,7 @@ body {
 	justify-content: center;
 }
 .start-state {
+	// display: none;
 	&__heading {
 		color: #fff;
 		font-size: 1.8rem;
@@ -38,10 +37,15 @@ body {
 		border: 1px solid transparent;
 		box-shadow: 15px 8px 24px 0px rgba(66, 68, 90, 1);
 		border-radius: 5px;
-        cursor: pointer;
+		background: rgb(142, 153, 139);
+		background: linear-gradient(195deg, rgba(142, 153, 139, 1) 10%, rgba(57, 218, 51, 1) 85%);
+		cursor: pointer;
 		font-size: 1.5rem;
 		margin: 8rem auto 0 auto;
 		text-transform: uppercase;
 		padding: 0.5rem 0.25rem;
 	}
 }
+@include large;
+@include medium;
+@include small;

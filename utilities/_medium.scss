@@ -1,0 +1,15 @@
+@mixin medium {
+    @media (min-width: 768px) {
+        .start-state {
+            &__heading {
+                font-size: 3rem;
+            }
+            &__images {
+                height: 7rem;
+            }
+            &__btn {
+                font-size: 2.5rem;
+            }
+        }
+    }
+}
