@@ -11,14 +11,29 @@
     <div class="start-state">
         <h1 class="start-state__heading">paper | rock | scissors</h1>
         <div class="start-state__images">
-            <img src="./utilities/paper.jpg" alt="" class="start-state__images start-state__images--paper">
-            <img src="./utilities/rock.jpg" alt="" class="start-state__images start-state__images--rock">
-            <img src="./utilities/scissors.jpg" alt="" class="start-state__images start-state__images--scissors">
+            <img src="./utilities/paper.jpg" alt="paper icon" class="start-state__images start-state__images--paper">
+            <img src="./utilities/rock.jpg" alt="rock icon" class="start-state__images start-state__images--rock">
+            <img src="./utilities/scissors.jpg" alt="scissors" class="start-state__images start-state__images--scissors">
         </div>
         <button class="start-state__btn">start game</button>
     </div>
     <div class="game-state">
-        
+        <div class="computer-box">
+            <p class="computer-box__text">computer <span class="computer-box__points">0</span></p>
+            <img class="computer-box__image" src="./utilities/paper.jpg" alt="">
+        </div>
+        <div class="player-box">
+            <img class="player-box__image" src="./utilities/paper.jpg" alt="">
+            <p class="player-box__text">player <span class="player-box__points">0</span></p>
+        </div>
+        <div class="game-info">
+            <p class="game-info__text">Choose your weapon!</p>
+            <div class="game-info__weapons">
+                <img src="./utilities/paper.jpg" alt="" class="game-info__weapons--weapon">
+                <img src="./utilities/rock.jpg" alt="" class="game-info__weapons--weapon">
+                <img src="./utilities/scissors.jpg" alt="" class="game-info__weapons--weapon">
+            </div>
+        </div>
     </div>
     <script src="./script.js"></script>
 </body>

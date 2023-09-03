@@ -12,11 +12,16 @@ body {
   background-size: cover;
   display: flex;
   font-size: 62.5%;
+  font-family: sans-serif;
   flex-direction: column;
   height: 100vh;
   justify-content: center;
+  position: relative;
 }
 
+.start-state {
+  display: none;
+}
 .start-state__heading {
   color: #fff;
   font-size: 1.8rem;
@@ -27,6 +32,7 @@ body {
   text-align: center;
 }
 .start-state__images {
+  cursor: pointer;
   display: flex;
   justify-content: space-evenly;
   height: 4.5rem;
@@ -45,6 +51,55 @@ body {
   padding: 0.5rem 0.25rem;
 }
 
+.game-state {
+  top: 0;
+  position: absolute;
+}
+.game-state .computer-box__text,
+.game-state .player-box__text {
+  color: #fff;
+  font-size: 2rem;
+  padding: 2rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+.game-state .computer-box__image,
+.game-state .player-box__image {
+  display: block;
+  height: 6rem;
+  margin: 1rem auto 1rem auto;
+}
+.game-state .computer-box__points,
+.game-state .player-box__points {
+  border: 1px solid #000;
+  border-radius: 8px;
+  background: rgb(150, 150, 150);
+  background: linear-gradient(195deg, rgb(150, 150, 150) 10%, rgb(34, 33, 33) 85%);
+  padding: 0.5rem 1rem;
+}
+.game-state .game-info__text {
+  color: #fff;
+  font-size: 1.5rem;
+  padding: 1rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+.game-state .game-info__weapons {
+  align-items: center;
+  border: 1px solid #000;
+  border-radius: 8px;
+  box-shadow: 15px 8px 24px 0px rgb(66, 68, 90);
+  background: rgb(142, 153, 139);
+  background: linear-gradient(195deg, rgb(142, 153, 139) 10%, rgb(218, 59, 51) 85%);
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+}
+.game-state .game-info__weapons--weapon {
+  cursor: pointer;
+  height: 5rem;
+}
+
 @media (min-width: 768px) {
   .start-state__heading {
     font-size: 3rem;
@@ -54,5 +109,11 @@ body {
   }
   .start-state__btn {
     font-size: 2.5rem;
+  }
+  .game-state .computer-box__text, .game-state .player-box__text {
+    font-size: 3rem;
+  }
+  .game-state .computer-box .game-info__text, .game-state .player-box .game-info__text {
+    font-size: 2rem;
   }
 }/*# sourceMappingURL=style.css.map */

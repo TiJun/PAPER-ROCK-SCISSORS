@@ -12,12 +12,14 @@ body {
 	background-size: cover;
 	display: flex;
 	font-size: 62.5%;
+	font-family: sans-serif;
 	flex-direction: column;
 	height: 100vh;
 	justify-content: center;
+	position: relative;
 }
 .start-state {
-	// display: none;
+	display: none;
 	&__heading {
 		color: #fff;
 		font-size: 1.8rem;
@@ -28,6 +30,7 @@ body {
 		text-align: center;
 	}
 	&__images {
+		cursor: pointer;
 		display: flex;
 		justify-content: space-evenly;
 		height: 4.5rem;
@@ -46,6 +49,56 @@ body {
 		padding: 0.5rem 0.25rem;
 	}
 }
-@include large;
+.game-state {
+	top: 0;
+	position: absolute;
+	.computer-box,
+	.player-box {
+		&__text {
+			color: #fff;
+			font-size: 2rem;
+			padding: 2rem;
+			text-align: center;
+			text-transform: uppercase;
+		}
+		&__image {
+			display: block;
+			height: 6rem;
+			margin: 1rem auto 1rem auto;
+		}
+		&__points {
+			border: 1px solid #000;
+			border-radius: 8px;
+			background: rgb(150, 150, 150);
+			background: linear-gradient(195deg, rgba(150, 150, 150, 1) 10%, rgba(34, 33, 33, 1) 85%);
+			padding: 0.5rem 1rem;
+		}
+	}
+	.game-info {
+		&__text {
+			color: #fff;
+			font-size: 1.5rem;
+			padding: 1rem;
+			text-align: center;
+			text-transform: uppercase;
+		}
+		&__weapons {
+			align-items: center;
+			border: 1px solid #000;
+			border-radius: 8px;
+			box-shadow: 15px 8px 24px 0px rgba(66, 68, 90, 1);
+			background: rgb(142, 153, 139);
+			background: linear-gradient(195deg, rgba(142, 153, 139, 1) 10%, rgba(218, 59, 51, 1) 85%);
+			display: flex;
+			justify-content: space-between;
+			padding: 1rem;
+			&--weapon {
+				cursor: pointer;
+				height: 5rem;
+			}
+		}
+	}
+}
+// @include large;
 @include medium;
-@include small;
+// @include small;
