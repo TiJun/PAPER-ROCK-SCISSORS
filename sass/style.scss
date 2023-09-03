@@ -1,0 +1,47 @@
+@use 'large' as *;
+@use 'medium' as *;
+@forward 'small';
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+body {
+	align-items: center;
+	background-image: url(../utilities/16324275_rm218batch4-ning-24.jpg);
+	background-size: cover;
+	display: flex;
+	font-size: 62.5%;
+	flex-direction: column;
+	height: 100vh;
+	justify-content: center;
+}
+.start-state {
+	&__heading {
+		color: #fff;
+		font-size: 1.8rem;
+		letter-spacing: 5px;
+		margin-bottom: 5rem;
+		text-transform: uppercase;
+		text-decoration: underline;
+		text-align: center;
+	}
+	&__images {
+		display: flex;
+		justify-content: space-evenly;
+		height: 4.5rem;
+	}
+	&__btn {
+		display: block;
+		border: 1px solid transparent;
+		box-shadow: 15px 8px 24px 0px rgba(66, 68, 90, 1);
+		border-radius: 5px;
+        cursor: pointer;
+		font-size: 1.5rem;
+		margin: 8rem auto 0 auto;
+		text-transform: uppercase;
+		padding: 0.5rem 0.25rem;
+	}
+}
