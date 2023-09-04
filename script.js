@@ -65,12 +65,12 @@ const checkWinner = () => {
     computer = computerWeapon.innerHTML
     player = playerWeapon.innerHTML
     if (computer === rock && player === rock || computer === paper && player === paper || computer === scissors && player === scissors) {
-        resultText.textContent = 'Remis'
+        resultText.textContent = 'Draw'
     } else if (computer === rock && player === paper || computer === paper && player === scissors || computer === scissors && player === rock) {
-        resultText.textContent = 'Wygrałeś'
+        resultText.textContent = 'You win'
         playerPoints.textContent++
     } else if (computer === rock && player === scissors || computer === paper && player === rock || computer === scissors && player === paper) {
-        resultText.textContent = 'Przegrałeś'
+        resultText.textContent = 'You lose'
         computerPoints.textContent++
     }
 }
