@@ -11,6 +11,7 @@ const playerWeapon = document.querySelector('.player-box__player--weapon')
 const rockWeapon = document.querySelector('#rock')
 const paperWeapon = document.querySelector('#paper')
 const scissorsWeapon = document.querySelector('#scissors')
+const resultText = document.querySelector('.game-info__text')
 const startApp = () => {
 	startState.classList.add('display-off')
 	gameState.classList.add('display-on')
@@ -28,7 +29,7 @@ const rockChoose = () => {
     } else if (randomWeapon === 2) {
         computerWeapon.innerHTML = scissors
     }
-    return
+    checkWinner()
 }
 const paperChoose = () => {
     Math.floor(Math.random()*3)
@@ -43,7 +44,7 @@ const paperChoose = () => {
     } else if (randomWeapon === 0) {
         computerWeapon.innerHTML = rock
     }
-    return
+    checkWinner()
 }
 const scissorsChoose = () => {
     Math.floor(Math.random()*3)
@@ -58,7 +59,20 @@ const scissorsChoose = () => {
     } else if (randomWeapon === 0) {
         computerWeapon.innerHTML = rock
     }
-    return
+    checkWinner()
+}
+const checkWinner = () => {
+    computer = computerWeapon.innerHTML
+    player = playerWeapon.innerHTML
+    if (computer === rock && player === rock || computer === paper && player === paper || computer === scissors && player === scissors) {
+        resultText.textContent = 'Remis'
+    } else if (computer === rock && player === paper || computer === paper && player === scissors || computer === scissors && player === rock) {
+        resultText.textContent = 'Wygrałeś'
+        playerPoints.textContent++
+    } else if (computer === rock && player === scissors || computer === paper && player === rock || computer === scissors && player === paper) {
+        resultText.textContent = 'Przegrałeś'
+        computerPoints.textContent++
+    }
 }
 startBtn.addEventListener('click', startApp)
 rockWeapon.addEventListener('click', rockChoose)
