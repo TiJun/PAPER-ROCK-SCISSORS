@@ -19,7 +19,7 @@ body {
 	position: relative;
 }
 .start-state {
-	display: none;
+	// display: none;
 	&__heading {
 		color: #fff;
 		font-size: 1.8rem;
@@ -30,7 +30,6 @@ body {
 		text-align: center;
 	}
 	&__images {
-		cursor: pointer;
 		display: flex;
 		justify-content: space-evenly;
 		height: 4.5rem;
@@ -46,10 +45,12 @@ body {
 		font-size: 1.5rem;
 		margin: 8rem auto 0 auto;
 		text-transform: uppercase;
+        transition: all .3s;
 		padding: 0.5rem 0.25rem;
 	}
 }
 .game-state {
+    display: none;
 	top: 0;
 	position: absolute;
 	.computer-box,
@@ -73,6 +74,12 @@ body {
 			background: linear-gradient(195deg, rgba(150, 150, 150, 1) 10%, rgba(34, 33, 33, 1) 85%);
 			padding: 0.5rem 1rem;
 		}
+		&__computer--weapon {
+			text-align: center;
+		}
+		&__player--weapon {
+			text-align: center;
+		}
 	}
 	.game-info {
 		&__text {
@@ -95,10 +102,17 @@ body {
 			&--weapon {
 				cursor: pointer;
 				height: 5rem;
+				transition: box-shadow .3s
 			}
 		}
 	}
 }
-// @include large;
+@include large;
 @include medium;
 // @include small;
+.display-off {
+	display: none;
+}
+.display-on {
+	display: block;
+}

@@ -12,13 +12,23 @@
             }
         }
         .game-state {
+            top: auto;
+            position: absolute;
             .computer-box, .player-box {
                 &__text {
                     font-size: 3rem;
                 }
-                .game-info {
-                    &__text {
-                        font-size: 2rem;
+                &__image {
+                    height: 8rem;
+                }
+            }
+            .game-info {
+                &__text {
+                    font-size: 2rem;
+                }
+                &__weapons {
+                    &--weapon {
+                        height: 8rem;
                     }
                 }
             }

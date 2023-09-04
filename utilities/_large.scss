@@ -1,0 +1,18 @@
+@mixin large {
+	@media (min-width: 992px) {
+		.start-state {
+			&__btn:hover {
+                background: linear-gradient(195deg, rgb(198 209 195) 10%, rgb(67 225 61) 85%)
+			}
+		}
+		.game-state {
+			.game-info {
+				&__weapons {
+					&--weapon:hover {
+						box-shadow: inset -1px 1px 20px 1px #fff;
+					}
+				}
+			}
+		}
+	}
+}

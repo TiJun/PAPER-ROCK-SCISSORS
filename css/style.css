@@ -19,9 +19,6 @@ body {
   position: relative;
 }
 
-.start-state {
-  display: none;
-}
 .start-state__heading {
   color: #fff;
   font-size: 1.8rem;
@@ -32,7 +29,6 @@ body {
   text-align: center;
 }
 .start-state__images {
-  cursor: pointer;
   display: flex;
   justify-content: space-evenly;
   height: 4.5rem;
@@ -48,10 +44,12 @@ body {
   font-size: 1.5rem;
   margin: 8rem auto 0 auto;
   text-transform: uppercase;
+  transition: all 0.3s;
   padding: 0.5rem 0.25rem;
 }
 
 .game-state {
+  display: none;
   top: 0;
   position: absolute;
 }
@@ -77,6 +75,14 @@ body {
   background: linear-gradient(195deg, rgb(150, 150, 150) 10%, rgb(34, 33, 33) 85%);
   padding: 0.5rem 1rem;
 }
+.game-state .computer-box__computer--weapon,
+.game-state .player-box__computer--weapon {
+  text-align: center;
+}
+.game-state .computer-box__player--weapon,
+.game-state .player-box__player--weapon {
+  text-align: center;
+}
 .game-state .game-info__text {
   color: #fff;
   font-size: 1.5rem;
@@ -98,8 +104,17 @@ body {
 .game-state .game-info__weapons--weapon {
   cursor: pointer;
   height: 5rem;
+  transition: box-shadow 0.3s;
 }
 
+@media (min-width: 992px) {
+  .start-state__btn:hover {
+    background: linear-gradient(195deg, rgb(198, 209, 195) 10%, rgb(67, 225, 61) 85%);
+  }
+  .game-state .game-info__weapons--weapon:hover {
+    box-shadow: inset -1px 1px 20px 1px #fff;
+  }
+}
 @media (min-width: 768px) {
   .start-state__heading {
     font-size: 3rem;
@@ -110,10 +125,27 @@ body {
   .start-state__btn {
     font-size: 2.5rem;
   }
+  .game-state {
+    top: auto;
+    position: absolute;
+  }
   .game-state .computer-box__text, .game-state .player-box__text {
     font-size: 3rem;
   }
-  .game-state .computer-box .game-info__text, .game-state .player-box .game-info__text {
+  .game-state .computer-box__image, .game-state .player-box__image {
+    height: 8rem;
+  }
+  .game-state .game-info__text {
     font-size: 2rem;
   }
+  .game-state .game-info__weapons--weapon {
+    height: 8rem;
+  }
+}
+.display-off {
+  display: none;
+}
+
+.display-on {
+  display: block;
 }/*# sourceMappingURL=style.css.map */
